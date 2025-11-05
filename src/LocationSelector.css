@@ -1,0 +1,60 @@
+.location-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* Wrap dropdowns together */
+.dropdown-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Dropdown Base Style */
+.dropdown {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Country is 2x wider than state & city */
+.country-dropdown {
+  width: 400px;
+}
+
+.state-dropdown,
+.city-dropdown {
+  width: 200px;
+}
+
+.dropdown:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.selection-message {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* 📱 Responsive for mobile */
+@media (max-width: 768px) {
+  .dropdown-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .country-dropdown,
+  .state-dropdown,
+  .city-dropdown {
+    width: 250px; /* uniform width on mobile */
+  }
+}
