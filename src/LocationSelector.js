@@ -15,7 +15,7 @@ const LocationSelector = () => {
     const fetchCountries = async () => {
       try {
         const response = await fetch(
-          'https://crio-location-selector.onrender.com/countries'
+          'https://location-selector.labs.crio.do/countries'
         );
         const data = await response.json();
         setCountries(data);
@@ -38,7 +38,7 @@ const LocationSelector = () => {
     if (country) {
       try {
         const response = await fetch(
-          `https://crio-location-selector.onrender.com/country=${country}/states`
+          `https://location-selector.labs.crio.do/country=${country}/states`
         );
         const data = await response.json();
         setStates(data);
@@ -58,7 +58,7 @@ const LocationSelector = () => {
     if (state) {
       try {
         const response = await fetch(
-          `https://crio-location-selector.onrender.com/country=${selectedCountry}/state=${state}/cities`
+          `https://location-selector.labs.crio.do/country=${selectedCountry}/state=${state}/cities`
         );
         const data = await response.json();
         setCities(data);
